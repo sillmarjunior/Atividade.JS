@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="site.js"></script>
+    <title>Atividade EAD</title>
+</head>
+
+<body>
+
+    <section class="atividade">
+        <fieldset>
+
+            <legend>Atividade 01!</legend>
+            <label for="motivo">Produto: </label> <select name="selproduto" id="produto"
+                onchange="verificaProduto(this.value)">
+                <option value=1>Refrigerante</option>
+                <option value=2>Sorvete</option>
+                <option value=3>Suco</option>
+                <option value=4>Outros</option>
+            </select>
+
+        </fieldset>
+
+        <form name="formSubtrair" action="#" onsubmit="return verificaSubtrair()">
+            <fieldset>
+
+                <legend>Atividade 02!</legend>
+                <label for="subtracao"> Insira dois valores para ser subtraidos: </label>
+                <input type="number" name="subtrair1" id="numero1">
+                <input type="number" name="subtrair2" id="numero2">
+                <button>Calcular</button>
+            </fieldset>
+        </form>
+
+        <form name="formDividir" action="#" onsubmit="return verificaDividir()">
+
+            <fieldset onsubmit="return varificaDividir()">
+
+                <legend>Atividade 03!</legend>
+                <label for="subtracao">Insira dois valores para ser divididos: </label>
+                <input type="number" name="dividir1" id="numero1">
+                <input type="number" name="dividir2" id="numero2">
+                <button>Calcular</button>
+
+            </fieldset>
+        </form>
+    </section>
+
+</body>
+
+</html>
