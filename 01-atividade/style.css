@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #F6F9FF;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #434343;
+    font-size: 16px;
+}
+
+form.cards {
+    display: flex;
+    padding: 32px;
+}
+
+form.cards div.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: white;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    max-height: 468px;
+    margin-left: 32px;
+}
+
+form.cards div.card:first-child {
+    margin-left: 0;
+}
+
+form.cards div.card label {
+    font-weight: 300;
+    max-width: 240px;
+    font-size: 80%;
+    margin-bottom: 16px;
+}
+
+form.cards div.card button{
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    border-radius: 32px;
+    border: 0;
+    cursor: pointer;
+    font-size: 80%;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 16px 0;
+}
+
+form.cards div.card input{
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    border-radius: 32px;
+    border: 0;
+    cursor: pointer;
+    font-size: 80%;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 16px 0;
+}
+
+form.cards div.card input {
+    background: linear-gradient(to right, #9F66FF, #DFCBFF);
+}
+
+
+form.cards div.card.primeiro select option {
+    background: linear-gradient(to right, #9F66FF, #DFCBFF);
+}
+form.cards div.card.segundo button {
+    background: linear-gradient(to right, #9F66FF, #DFCBFF);
+}
+form.cards div.card.terceiro button {
+    background: linear-gradient(to right, #3E8AFF, #BBDEFF);
+}
+form.cards div.card.quarto button {
+    background: linear-gradient(to right, #FE5F8F, #FFC7D9);
+}
+form.cards div.card.quinto button {
+    background: linear-gradient(to right, #FE5F8F, #FFC7D9);
+}
+form.cards div.card.sexto button {
+    background: linear-gradient(to right, #FE5F8F, #FFC7D9);
+}
+form.cards div.card.setimo button {
+    background: linear-gradient(to right, #FE5F8F, #FFC7D9);
+}
+
+form.cards div.card.primeiro {
+    box-shadow: 20px 20px 50px -30px #3c3c3c;
+}
+form.cards div.card.segundo {
+    box-shadow: 20px 20px 50px -30px #DBC4FF;
+}
+form.cards div.card.terceiro {
+    box-shadow: 20px 20px 50px -30px #3c3c3c;
+}
+form.cards div.card.quarto {
+    box-shadow: 20px 20px 50px -30px #FFC1D5;
+}
+form.cards div.card.quinto {
+    box-shadow: 20px 20px 50px -30px #3c3c3c;
+}
+form.cards div.card.sexto {
+    box-shadow: 20px 20px 50px -30px #3c3c3c;
+}
+form.cards div.card.setimo {
+    box-shadow: 20px 20px 50px -30px #3c3c3c;
+}
+
+@media screen and (max-width: 720px) {
+    form.cards {
+        flex-direction: column;
+    }
+
+    form.cards div.card {
+        margin-left: 10;
+        margin-bottom: 32px;
+    }
+
+    form.cards div.card:last-child {
+        margin-bottom: 0;
+    }
+
+    form.cards div.card button {
+        font-size: 70%;
+    }
+.tudo1{
+    display: flex;
+    flex-direction: row;
+}
+}
