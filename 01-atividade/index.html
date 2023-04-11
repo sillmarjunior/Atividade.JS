@@ -11,8 +11,8 @@
 
 <body>
 
-    <section class="atividade">
-        <fieldset>
+    <form>
+        <div>
 
             <legend>Atividade 01!</legend>
             <label for="motivo">Produto: </label> <select name="selproduto" id="produto"
@@ -23,32 +23,63 @@
                 <option value=4>Outros</option>
             </select>
 
-        </fieldset>
+        </div>
 
-        <form name="formSubtrair" action="#" onsubmit="return verificaSubtrair()">
-            <fieldset>
 
-                <legend>Atividade 02!</legend>
-                <label for="subtracao"> Insira dois valores para ser subtraidos: </label>
-                <input type="number" name="subtrair1" id="numero1">
-                <input type="number" name="subtrair2" id="numero2">
-                <button>Calcular</button>
-            </fieldset>
-        </form>
+        <div>
 
-        <form name="formDividir" action="#" onsubmit="return verificaDividir()">
+            <legend>Atividade 02!</legend>
+            <label for="subtracao"> Insira dois valores para ser subtraidos: </label>
+            <input type="number" id="subtrair1">
+            <input type="number" id="subtrair2">
+            <button onclick="verificaSubtrair()">Calcular</button>
 
-            <fieldset onsubmit="return varificaDividir()">
+        </div>
 
-                <legend>Atividade 03!</legend>
-                <label for="subtracao">Insira dois valores para ser divididos: </label>
-                <input type="number" name="dividir1" id="numero1">
-                <input type="number" name="dividir2" id="numero2">
-                <button>Calcular</button>
+        <div>
 
-            </fieldset>
-        </form>
-    </section>
+            <legend>Atividade 03!</legend>
+            <label for="subtracao">Insira dois valores para ser divididos: </label>
+            <input type="number" id="dividir1">
+            <input type="number" id="dividir2">
+            <button onclick="verificaDividir()">Calcular</button>
+
+        </div>
+
+        <div>
+
+            <legend>Atividade 04!</legend>
+            <label for="imprimir">Clique no botão para imprimir os números de 1 a 1000 no console: </label>
+            <button onclick="imprimir()">Imprimir</button>
+
+        </div>
+
+        <div>
+
+            <legend>Atividade 05!</legend>
+            <label for="cadastro">Clique no botão para mostrar o cadastro do usuario: </label>
+            <button onclick="cadastro()">Mostrar</button>
+
+        </div>
+
+        <div>
+
+            <legend>Atividade 06!</legend>
+            <label for="constate">Clique no botão "Alerta" para mostra-lo: </label>
+            <button onclick="constante()">Alerta</button>
+
+        </div>
+
+        <div>
+
+            <legend>Atividade 07!</legend>
+            <label for="nota">Informe a nota para saber se foi aprovado :</label>
+            <input type="number" id="nota">
+            <button onclick="validarNota()">Resultado</button>
+        </div>
+
+
+    </form>
 
 </body>
 
