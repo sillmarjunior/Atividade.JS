@@ -6,27 +6,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="site.js"></script>
-    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="teste.css" type="text/css">
     <title>Atividade EAD</title>
 </head>
 
 <body>
 
     <form class="cards">
-        <div class="tudo1">
-        <div class="card primeiro">
+        <div class="flip-card">
+            <div class="card primeiro">
+                <div class="card-front">
+                    <h3>Atividade 01!</h3>
+                    <label for="motivo">Produto: </label> <select name="selproduto" id="produto"
+                        onchange="verificaProduto(this.value)">
+                        <option value=1>Refrigerante</option>
+                        <option value=2>Sorvete</option>
+                        <option value=3>Suco</option>
+                        <option value=4>Outros</option>
+                    </select>
+                </div>
+                <div class="card-back">
+                    <h3>produtod d sdsds d   </h3>
+                    <div id="opcaoProduto"></div>
+                </div>
 
-            <h3>Atividade 01!</h3>
-            <label for="motivo">Produto: </label> <select name="selproduto" id="produto"
-                onchange="verificaProduto(this.value)">
-                <option value=1>Refrigerante</option>
-                <option value=2>Sorvete</option>
-                <option value=3>Suco</option>
-                <option value=4>Outros</option>
-            </select>
-
+            </div>
         </div>
-
 
         <div class="card segundo">
 
@@ -47,8 +52,8 @@
             <button onclick="verificaDividir()">Calcular</button>
 
         </div>
-    </div>
-    <div class="tudo2">
+
+
         <div class="card quarto">
 
             <h3>Atividade 04!</h3>
@@ -72,9 +77,7 @@
             <button onclick="constante()">Alerta</button>
 
         </div>
-    </div>
-    
-    <div class="tudo3">
+
         <div class="card setimo">
 
             <h3>Atividade 07!</h3>
@@ -82,7 +85,7 @@
             <input type="number" id="nota">
             <button onclick="validarNota()">Resultado</button>
         </div>
-    </div>
+
     </form>
 
 </body>

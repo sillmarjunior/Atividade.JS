@@ -1,7 +1,11 @@
 function verificaProduto(produto) {
 
+    var elemento = document.getElementById("opcaoProduto");
+
     switch (produto) {
         case "1":
+            var texto = document.createTextNode("Produto em estoque!");
+            elemento.appendChild(texto);
             console.log("Produto em estoque");
             break;
         case "2":
@@ -14,6 +18,7 @@ function verificaProduto(produto) {
             console.log("Produto esgotado, por favor selecione outro.");
     }
 }
+
 
 function verificaSubtrair() {
     console.log("passou aqui")
