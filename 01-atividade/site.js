@@ -1,11 +1,24 @@
 function verificaProduto(produto) {
 
+    const cardFlip = document.getElementById("flip");
+
+
+
     var elemento = document.getElementById("opcaoProduto");
 
     switch (produto) {
         case "1":
+            if (cardFlip.classList) cardFlip.classList.add("flip-card");
+            else cardFlip.className += " flip-card";
+
+            //Adiciona botao para limpar a class do flip-card
+            var select = document.createElement("button");
+		    select.setAttribute("name", "OK");
+            elemento.appendChild(select);
+
             var texto = document.createTextNode("Produto em estoque!");
             elemento.appendChild(texto);
+            
             console.log("Produto em estoque");
             break;
         case "2":
@@ -72,8 +85,8 @@ function constante() {
 
 function validarNota() {
 
-var nota = document.getElementById("nota").value;
-console.log(nota);
+    var nota = document.getElementById("nota").value;
+    console.log(nota);
 
     if (nota == 7) {
         console.log("Aprovado");
@@ -85,3 +98,4 @@ console.log(nota);
         console.log("Nota inválida")
     }
 }
+
