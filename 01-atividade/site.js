@@ -110,6 +110,12 @@ function imprimir() {
 
 function cadastro() {
 
+    const cardFlip = document.getElementById("flip5");
+    var elemento = document.getElementById("imprimirCadastro");
+
+    if (cardFlip.classList) cardFlip.classList.add("flip-card");
+    else cardFlip.className += " flip-card";
+
     let user = {
         cidade: "Joinville",
         estado: "SC",
@@ -118,13 +124,26 @@ function cadastro() {
         numero: 123
     }
 
-    console.log("O usuário mora em " + user.cidade + " / " + user.estado + ", no bairro " + user.bairro + ", na rua " + user.rua + " nº " + user.numero);
+    var resposta = document.createElement("span")
+    resposta.setAttribute("class", "resposta")
+    var texto = document.createTextNode("O usuário mora em " + user.cidade + "/" + user.estado + ", no bairro " + user.bairro + ", na rua " + user.rua + " nº " + user.numero);
+    resposta.appendChild(texto)
+    elemento.appendChild(resposta);
+    var quebraLinha = document.createElement("br")
+    elemento.appendChild(quebraLinha);
+    var botao = document.createElement("button");
+    botao.setAttribute("name", "Limpar");
+    var texto = document.createTextNode("OK");
+    botao.appendChild(texto);
+    elemento.appendChild(botao);
+
 }
 
 function constante() {
 
     const atividade = "Atividade EAD"
     alert(atividade);
+    alert(typeof(atividade));
 }
 
 function validarNota() {
