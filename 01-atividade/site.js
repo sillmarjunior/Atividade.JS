@@ -1,59 +1,103 @@
 function verificaProduto(produto) {
 
     const cardFlip = document.getElementById("flip");
-
-
-
     var elemento = document.getElementById("opcaoProduto");
 
     switch (produto) {
-        case "1":
+        case "2":
+        case "3":
+        case "4":
             if (cardFlip.classList) cardFlip.classList.add("flip-card");
             else cardFlip.className += " flip-card";
 
             //Adiciona botao para limpar a class do flip-card
-            var select = document.createElement("button");
-		    select.setAttribute("name", "OK");
-            elemento.appendChild(select);
-
+            var resposta = document.createElement("span")
+            resposta.setAttribute("class", "resposta")
             var texto = document.createTextNode("Produto em estoque!");
-            elemento.appendChild(texto);
-            
-            console.log("Produto em estoque");
-            break;
-        case "2":
-            console.log("Produto em estoque");
-            break;
-        case "3":
+            resposta.appendChild(texto)
+            elemento.appendChild(resposta);
+            var quebraLinha = document.createElement("br")
+            elemento.appendChild(quebraLinha);
+            var botao = document.createElement("button");
+            botao.setAttribute("name", "Limpar");
+            var texto = document.createTextNode("OK");
+            botao.appendChild(texto);
+            elemento.appendChild(botao);
             console.log("Produto em estoque");
             break;
         default:
+            if (cardFlip.classList) cardFlip.classList.add("flip-card");
+            else cardFlip.className += " flip-card";
+
+            var resposta = document.createElement("span")
+            resposta.setAttribute("class", "resposta")
+            var texto = document.createTextNode("Produto esgotado, por favor selecione outro.");
+            resposta.appendChild(texto)
+            elemento.appendChild(resposta);
+            var quebraLinha = document.createElement("br")
+            elemento.appendChild(quebraLinha);
+            var botao = document.createElement("button");
+            botao.setAttribute("name", "Limpar");
+            var texto = document.createTextNode("OK");
+            botao.appendChild(texto);
+            elemento.appendChild(botao);
             console.log("Produto esgotado, por favor selecione outro.");
     }
 }
 
 
 function verificaSubtrair() {
-    console.log("passou aqui")
-    let valor1 = document.getElementById("subtrair1").value;
-    console.log(valor1);
-    let valor2 = document.getElementById("subtrair2").value;
-    console.log(valor2);
 
-    let calcular = valor1 - valor2;
-    return console.log(calcular);
+    const cardFlip = document.getElementById("flip2");
+    if (cardFlip.classList) cardFlip.classList.add("flip-card");
+    else cardFlip.className += " flip-card";
+
+    let valor1 = document.getElementById("subtrair1").value;
+    let valor2 = document.getElementById("subtrair2").value;
+    var subtracao = valor1 - valor2;
+
+    var elemento = document.getElementById("valorSubtracao");
+    var resposta = document.createElement("span")
+    resposta.setAttribute("class", "resposta")
+    var texto = document.createTextNode("O valor da subtração é igual: " + subtracao);
+    resposta.appendChild(texto)
+    elemento.appendChild(resposta);
+    var quebraLinha = document.createElement("br")
+    elemento.appendChild(quebraLinha);
+    var botao = document.createElement("button");
+    botao.setAttribute("name", "Limpar");
+    var texto = document.createTextNode("OK");
+    botao.appendChild(texto);
+    elemento.appendChild(botao);
+
+
 
 }
 
 function verificaDividir() {
-    console.log("passou aqui")
+   
+    const cardFlip = document.getElementById("flip3");
+    var elemento = document.getElementById("valorDivisao");
     let valor1 = document.getElementById("dividir1").value;
-    console.log(valor1);
     let valor2 = document.getElementById("dividir2").value;
-    console.log(valor2);
 
-    let calcular = valor1 / valor2;
-    return console.log(calcular);
+    if (cardFlip.classList) cardFlip.classList.add("flip-card");
+    else cardFlip.className += " flip-card";
+
+    let divisao = valor1 / valor2;
+    
+    var resposta = document.createElement("span")
+    resposta.setAttribute("class", "resposta")
+    var texto = document.createTextNode("O valor da divisão é igual: " + divisao);
+    resposta.appendChild(texto)
+    elemento.appendChild(resposta);
+    var quebraLinha = document.createElement("br")
+    elemento.appendChild(quebraLinha);
+    var botao = document.createElement("button");
+    botao.setAttribute("name", "Limpar");
+    var texto = document.createTextNode("OK");
+    botao.appendChild(texto);
+    elemento.appendChild(botao);
 
 }
 
