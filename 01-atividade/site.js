@@ -75,7 +75,7 @@ function verificaSubtrair() {
 }
 
 function verificaDividir() {
-   
+
     const cardFlip = document.getElementById("flip3");
     var elemento = document.getElementById("valorDivisao");
     let valor1 = document.getElementById("dividir1").value;
@@ -85,7 +85,7 @@ function verificaDividir() {
     else cardFlip.className += " flip-card";
 
     let divisao = valor1 / valor2;
-    
+
     var resposta = document.createElement("span")
     resposta.setAttribute("class", "resposta")
     var texto = document.createTextNode("O valor da divisão é igual: " + divisao);
@@ -103,9 +103,41 @@ function verificaDividir() {
 
 function imprimir() {
 
-    for (let i = 1; i < 11; i++) {
-        console.log(i);
-    }
+    const cardFlip = document.getElementById("flip4");
+    if (cardFlip.classList) cardFlip.classList.add("flip-card");
+    else cardFlip.className += " flip-card";
+    var elemento = document.getElementById("imprimir");
+
+    var resposta = document.createElement("input");
+    resposta.setAttribute("id", "contador");
+    resposta.setAttribute("placeholder", 1);
+    elemento.appendChild(resposta);
+    var quebraLinha = document.createElement("br");
+    elemento.appendChild(quebraLinha);
+    var botao = document.createElement("button");
+    botao.setAttribute("id", "contar");
+    var texto = document.createTextNode("OK");
+    botao.appendChild(texto);
+    elemento.appendChild(botao);
+
+    contagem = document.getElementById("contador");
+
+
+       let myInterval = setInterval(() => {
+            contagem.value++
+        }, 10);
+    
+       setTimeout(() => {
+            clearInterval(myInterval);
+       },10000);
+}
+
+function contagem() {
+    contagem = document.getElementById("display");
+
+    setInterval(() => {
+        contagem.value++
+    });
 }
 
 function cadastro() {
@@ -143,7 +175,7 @@ function constante() {
 
     const atividade = "Atividade EAD"
     alert(atividade);
-    alert(typeof(atividade));
+    alert(typeof (atividade));
 }
 
 function validarNota() {
@@ -152,13 +184,31 @@ function validarNota() {
     console.log(nota);
 
     if (nota == 7) {
-        console.log("Aprovado");
-    } else if (nota == 5) {
-        console.log("Recuperação");
+        situacao = "Aluno está aprovado!";
+    } else if (nota == 5 || nota == 6) {
+        situacao = "Aluno está em recuperação!";
     } else if (nota < 5 && nota >= 0) {
-        console.log("Reprovado")
+        situacao = "Aluno está reprovado!";
     } else {
-        console.log("Nota inválida")
+        situacao = "Nota inválida!";
     }
-}
 
+    const cardFlip = document.getElementById("flip7");
+    var elemento = document.getElementById("informaNota");
+
+    if (cardFlip.classList) cardFlip.classList.add("flip-card");
+    else cardFlip.className += " flip-card";
+
+    var resposta = document.createElement("span")
+    resposta.setAttribute("class", "resposta")
+    var texto = document.createTextNode(situacao);
+    resposta.appendChild(texto)
+    elemento.appendChild(resposta);
+    var quebraLinha = document.createElement("br")
+    elemento.appendChild(quebraLinha);
+    var botao = document.createElement("button");
+    botao.setAttribute("name", "Limpar");
+    var texto = document.createTextNode("OK");
+    botao.appendChild(texto);
+    elemento.appendChild(botao);
+}

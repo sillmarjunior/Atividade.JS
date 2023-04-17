@@ -6,7 +6,7 @@
 }
 
 body {
-    background: #003db6;
+    background: #ffffff;
     height: 100vh;
     width: 100%;
     display: flex;
@@ -18,6 +18,13 @@ body {
 
 form.cards {
     display: flex;
+    padding: 32px;
+    align-items: center ;
+    /*display: grid;
+    grid-template-columns: repeat(3,1fr);
+    max-width: 800px;  
+    margin: 0 auto;
+    grid-gap: 20px;*/
 }
 
 form.cards div.card {
@@ -28,9 +35,8 @@ form.cards div.card {
     background: white;
     padding: 8rem 1.5rem;
     border-radius: 8px;
-    max-height: 468px;
-    width: 200px;
-    margin-left: 20px;
+    height: 400px;
+    width: 200px;  
 }
 
 form.cards div.card label {
@@ -39,8 +45,6 @@ form.cards div.card label {
     font-size: 80%;
     margin: 16px;
 }
-
-
 
 form.cards div.card button{
     padding: 0.5rem 1rem;
@@ -75,56 +79,23 @@ form.cards div.card select{
     font-weight: 500;
     color: rgb(0, 0, 0);
     margin-bottom: 16px 0;
+    background: linear-gradient(to right, #2d253b, #DFCBFF);
+}
+
+form.cards div.card label{
+    font-size: 100%;
+    margin: 16px;
 }
 
 form.cards div.card input {
     background: linear-gradient(to right, #2d253b, #DFCBFF);
 }
 
-form.cards div.card select {
+form.cards div.card button {
     background: linear-gradient(to right, #2d253b, #DFCBFF);
 }
 
-
-
-form.cards div.card.segundo button {
-    background: linear-gradient(to right, #2d253b, #DFCBFF);
-}
-form.cards div.card.terceiro button {
-    background: linear-gradient(to right, #2d253b, #BBDEFF);
-}
-form.cards div.card.quarto button {
-    background: linear-gradient(to right, #2d253b, #FFC7D9);
-}
-form.cards div.card.quinto button {
-    background: linear-gradient(to right, #2d253b, #FFC7D9);
-}
-form.cards div.card.sexto button {
-    background: linear-gradient(to right, #2d253b, #FFC7D9);
-}
-form.cards div.card.setimo button {
-    background: linear-gradient(to right, #2d253b, #FFC7D9);
-}
-
-form.cards div.card.primeiro {
-    box-shadow: 20px 20px 50px -30px #3c3c3c;
-}
-form.cards div.card.segundo {
-    box-shadow: 20px 20px 50px -30px #3c3c3c;
-}
-form.cards div.card.terceiro {
-    box-shadow: 20px 20px 50px -30px #3c3c3c;
-}
-form.cards div.card.quarto {
-    box-shadow: 20px 20px 50px -30px #3c3c3c;
-}
-form.cards div.card.quinto {
-    box-shadow: 20px 20px 50px -30px #3c3c3c;
-}
-form.cards div.card.sexto {
-    box-shadow: 20px 20px 50px -30px #3c3c3c;
-}
-form.cards div.card.setimo {
+form.cards div.card {
     box-shadow: 20px 20px 50px -30px #3c3c3c;
 }
 
@@ -149,40 +120,37 @@ form.cards div.card.setimo {
 
 .flip-card {
     background-color: transparent;
-    width: 300px;
-    height: 200px;
+    width: 200px;
+    max-height: 468px;
     border: 1px solid #f1f1f1;
+    border-radius: 8px;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
-  }
+    margin-right: 20px;
+    
+}
 
-  .card.primeiro {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
+  .card {
     transition: transform 0.8s;
     transform-style: preserve-3d;
   }
 
-  .card.front, .card.back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+  .flip-card:hover .card {
+    transform: rotateY(180deg);
+  }
+
+  .card-front, .card-back {
     -webkit-backface-visibility: hidden; /* Safari */
     backface-visibility: hidden;
   }
-
-  .flip-card:hover .card.primeiro {
-    transform: rotateY(180deg);
-  }
   
-  .card.front {
-    background-color: #bbb;
-    color: black;
-  }
-
-  .card.back {
-    background-color: dodgerblue;
+  .card-back {
     color: rgb(0, 0, 0);
     transform: rotateY(180deg);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  #flip{
+    
   }
